@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form method="POST">
+                <h1>De-Sci-pher</h1>
+        </div>
+        <div class="row">
+            <h4 style="text-align:center">Try decrypt!</h4>
+        </div>
+        
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+               {% if final_plain_text == 'No text to display yet' %}   
+                  No plaintext to display yet 
+               {% else %}
+                  decryption successful :  {{final_plain_text}} 
+                {% endif %}
+            
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+        <div class="row input-container">
+
+            <div class="col-xs-12">
+                <div class="styled-input wide">
+                    <input type="text" name="key" id="key" required />
+                    <label for="key">key</label>
+                </div>
+            </div>
+            
+            <div class="col-xs-12">
+                <div class="styled-input wide">
+                    <textarea type="text" id="ciphermessage" name="ciphermessage" required>
+                    
+                    </textarea>
+                    <label for="ciphermessage">Cipher Message</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <button type="submit" class="btn-lrg submit-btn">Decrypt Message</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</html>
