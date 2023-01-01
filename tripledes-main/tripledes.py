@@ -10,7 +10,7 @@ iv = '2132435465768797'
 # key = '000000000000000000000000000000000000000000000000'
 #here is the data you want to encrypt
 key = secrets.token_hex(24)
-data = "Andrew is a weird bastard"
+data = "Cryptography is cool "
 
 def encrypt(iv, key, data):
     iv = binascii.unhexlify(iv)
@@ -46,7 +46,7 @@ if __name__ == '__main__':
     # data_bytes, _ = codecs.escape_decode(data, 'hex')
     # print(finalhard)
     
-    print("IT IS FUCKING CORRECT")
+    print("IT WORKS!!!")
     print(decrypt(iv,testkey,ciphermessage))
 
     
