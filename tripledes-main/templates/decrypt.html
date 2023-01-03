@@ -15,10 +15,11 @@
     <div class="container">
         <div class="row">
             <form method="POST">
-                <h1>De-Sci-pher</h1>
+                <h1>Decryption</h1>
         </div>
         <div class="row">
-            <h4 style="text-align:center">Try decrypt!</h4>
+            <h4 style="text-align:center">Decrypt your message below!</h4>
+            <h4 style="text-align: center">Enter the received decryption keys in the respective fields</h4>
         </div>
         
             <div class="alert alert-primary alert-dismissible fade show" role="alert">
@@ -36,7 +37,7 @@
             <div class="col-xs-12">
                 <div class="styled-input wide">
                     <input type="text" name="key" id="key" required />
-                    <label for="key">key</label>
+                    <label for="key">Private Key (Received from phone)</label>
                 </div>
             </div>
             
@@ -45,12 +46,13 @@
                     <textarea type="text" id="ciphermessage" name="ciphermessage" required>
                     
                     </textarea>
-                    <label for="ciphermessage">Cipher Message</label>
+                    <label for="ciphermessage">Encrypted Message (Received in Email) </label>
                 </div>
             </div>
             <div class="col-xs-12">
                 <button type="submit" class="btn-lrg submit-btn">Decrypt Message</button>
             </div>
+            <!-- <a href="encrypt.html"><button type="button" class="btn-lrg encrypt-again-btn">Encrypt another message</button></a> -->
             </form>
         </div>
     </div>
